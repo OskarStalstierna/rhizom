@@ -1,7 +1,8 @@
 app.controller('homeCtrl', ["$scope", function($scope){
     
     
-    $scope.title = "Boilerplate for angularjs"
+    $scope.title = "Epistemologi"
+    $scope.groups = "gr1, gr2"
     
     var hightlight = "red";
     var bg = "rgba(0,0,0,0.4)";
