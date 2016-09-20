@@ -1,3 +1,20 @@
+.splash
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    z-index: 99
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    transition: all .8s cubic-bezier(1, 0.04, 0.78, 0.68)
+    
+.dissapear
+    transform: translateY(100vw)
+
 .brand
     position: absolute
     top: 20px
@@ -26,6 +43,7 @@ h2
 
 .sidebar
     transition: all .3s ease-in-out
+
     
 .panel
     margin: 20px 0
@@ -35,3 +53,4 @@ h2
     img
         width: 100%
         height: auto
+        

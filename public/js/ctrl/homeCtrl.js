@@ -1,6 +1,14 @@
 app.controller('homeCtrl', ["$scope", "node", function($scope, node){
     //$scope.title = "AIDS OSKAR!!!!"
 
+    $scope.splash = true;
+    
+    setTimeout(function(){
+        $scope.$apply(function() {
+            $scope.splash = false;
+        });
+    },2000);
+    
     $scope.title = null;
     $scope.groups = "grp1";
     
