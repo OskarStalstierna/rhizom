@@ -1,34 +1,3 @@
-var app = angular.module('app', ['ngRoute']);
-app.config(function($locationProvider, $routeProvider) {
-	$routeProvider.when('/', {
-		templateUrl: 'public/views/home.html',
-		controller: 'homeCtrl'
-	}).otherwise({ redirectTo: '/' });
-});
-
-app.controller('homeCtrl', ["$scope", "node", function($scope, node){
-    //$scope.title = "AIDS OSKAR!!!!"
-
-    $scope.title = "Rhizom";
-    $scope.groups = "grp1";
-    
-    $scope.network = new vis.Network(document.getElementById('c'), { nodes: new vis.DataSet(node.nodes), edges: new vis.DataSet(node.edges) }, {});
-    
-    $scope.network.on( 'select', function(params) {
-        if(params.nodes == ""){
-            console.log("a",params.edges);
-        }
-        else{
-            console.log("b", params.nodes[0]);
-            $scope.$apply(function() {
-                $scope.title = params.nodes[0];    
-            });
-            
-        }
-    });
-
-}]);
-
 (function() {
  
    angular.module('app').factory('node', node);
