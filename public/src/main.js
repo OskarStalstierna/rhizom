@@ -9,7 +9,7 @@ app.config(function($locationProvider, $routeProvider) {
 app.controller('homeCtrl', ["$scope", "node", function($scope, node){
     //$scope.title = "AIDS OSKAR!!!!"
 
-    $scope.title = "Rhizom";
+    $scope.title = null;
     $scope.groups = "grp1";
     
     $scope.network = new vis.Network(document.getElementById('c'), { nodes: new vis.DataSet(node.nodes), edges: new vis.DataSet(node.edges) }, {});
@@ -17,11 +17,16 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
     $scope.network.on( 'select', function(params) {
         if(params.nodes == ""){
             console.log("a",params.edges);
+            if(params.edges.length == 0){
+              $scope.$apply(function() {
+                $scope.title = null;
+            });
+            } 
         }
         else{
             console.log("b", params.nodes[0]);
             $scope.$apply(function() {
-                $scope.title = params.nodes[0];    
+                $scope.title = params.nodes[0];
             });
             
         }
@@ -107,7 +112,7 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
                 {id: "feministscience", label: 'Feminist ...science', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "black", border: "black" }, border: border }},
                
                //digitaldivides
-                {id: "digitaldivides", label: 'Digital divides', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "grey", border: "grey" }, border: border }},
+                {id: "digitaldivides", label: 'Digital divides', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: getColor(), border: getColor() }, border: border }},
                
                //epistemological
                 {id: "epistemological", label: 'Epistemological', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "teal", border: "teal" }, border: border }},

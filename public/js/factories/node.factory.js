@@ -76,7 +76,7 @@
                 {id: "feministscience", label: 'Feminist ...science', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "black", border: "black" }, border: border }},
                
                //digitaldivides
-                {id: "digitaldivides", label: 'Digital divides', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "grey", border: "grey" }, border: border }},
+                {id: "digitaldivides", label: 'Digital divides', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: getColor(), border: getColor() }, border: border }},
                
                //epistemological
                 {id: "epistemological", label: 'Epistemological', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: "teal", border: "teal" }, border: border }},

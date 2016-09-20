@@ -15,6 +15,18 @@ h2 {
   margin: 0;
   font-size: 2vw; }
 
+.slide_out {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%); }
+
+.slide_in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+.sidebar {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
 .panel {
   margin: 20px 0;
   padding: 10px;
@@ -25,7 +37,7 @@ h2 {
 
 body {
   height: 100vh;
-  background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+  background-image: url("http://edublogawards.com/files/2013/11/black-dark-background-xav1qw.jpg");
   background-size: cover;
   overflow: hidden; }
 
