@@ -29,6 +29,7 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
         $scope.mediaBoard = !$scope.mediaBoard;
     }
     
+    
     $scope.scrollTop = function(){
         $("#media_sidebar").animate({ scrollTop: 0 }, "fast");
     }
