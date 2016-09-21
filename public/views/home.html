@@ -5,19 +5,19 @@
    
 
 <div class="brand">
-    <img src="/public/img/logo.png" alt="">
+    <img src="/public/img/logo.svg" alt="">
 </div>
 <div class="col-xs-9 col-md-12" style="margin: 0; padding: 0">
     <div id="c"></div>
 </div>
 
 <div class="col-xs-3 col-md-3 offset-md-3" style="overflow: scroll; height: 100vh; position: absolute; right: 0">
-    <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">
+    <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">       
         <div class="panel panel-default">
             <div class="panel-body">
                 <h2>{{ title }}</h2>
                 <span class="label label-default">{{ groups }}</span>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>{{ desc | limitTo: 300}}</p>
                 <div class="panel">
                     <img src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg" alt="">
                 </div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st2{font-family:'MyriadPro-Regular';}
+	.st3{font-size:113.7008px;}
+	.st4{letter-spacing:17;}
+</style>
+<circle class="st0" cx="104" cy="78" r="27.5"/>
+<circle class="st0" cx="317" cy="112.5" r="56"/>
+<circle class="st0" cx="159.2" cy="274.3" r="44.2"/>
+<circle class="st0" cx="349" cy="318.5" r="42.8"/>
+<circle class="st0" cx="276.3" cy="247.5" r="15"/>
+<circle class="st0" cx="181.3" cy="144.5" r="26.9"/>
+<polyline class="st1" points="349,318.5 317,112.5 104,78 181.3,144.5 159.2,274.3 "/>
+<polyline class="st1" points="349,327 276.3,247.5 159.2,274.3 317,112.5 "/>
+<text transform="matrix(1 0 0 1 18 471.1006)" class="st0 st2 st3 st4">Rhizom</text>
+</svg>

@@ -3,6 +3,10 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
 
     $scope.splash = true;
     
+    
+    $scope.desc = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, magni. Nobis ullam adipisci voluptates consequatur eveniet deleniti expedita optio, vero quam culpa molestias facere laudantium enim vitae accusamus atque possimus odit voluptatem distinctio repellat eaque, error commodi et nulla.";
+    
+    
     setTimeout(function(){
         $scope.$apply(function() {
             $scope.splash = false;
