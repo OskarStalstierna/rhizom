@@ -11,6 +11,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
     $scope.sce = $sce;
     $scope.splash = true;
     $scope.data = [];
+    $scope.mediaBoard = false;
     
     $scope.desc = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, magni. Nobis ullam adipisci voluptates consequatur eveniet deleniti expedita optio, vero quam culpa molestias facere laudantium enim vitae accusamus atque possimus odit voluptatem distinctio repellat eaque, error commodi et nulla.";
     
@@ -24,10 +25,19 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
     $scope.title = null;
     $scope.groups = "grp1";
     
+    $scope.changeMediaState = function(){
+        $scope.mediaBoard = !$scope.mediaBoard;
+    }
+    
+    $scope.scrollTop = function(){
+        $("#media_sidebar").animate({ scrollTop: 0 }, "fast");
+    }
+    
     $scope.network = new vis.Network(document.getElementById('c'), { nodes: new vis.DataSet(node.nodes), edges: new vis.DataSet(node.edges) }, {});
     
     $scope.network.on( 'select', function(params) {
         if(params.nodes == ""){
+            $scope.scrollTop();
             console.log("a",params.edges);
             if(params.edges.length == 0){
               $scope.$apply(function() {
@@ -36,6 +46,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
             } 
         }
         else{
+            $scope.scrollTop();
             console.log("b", params.nodes[0]);
             $scope.$apply(function() {
                 $scope.data = texts.getByTag(params.nodes[0]);
@@ -207,7 +218,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
        var texts = [
            {
                 "group":"grupp8",
-                "tag": "Epistemological",
+                "tag": "Posthuman",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lobortis lectus. Nunc mollis egestas metus sit amet condimentum. Fusce tincidunt, arcu id mattis elementum, elit lectus gravida enim, quis pharetra orci dui nec enim. Aenean at tempor nulla. Cras accumsan consectetur orci at efficitur.",
                 "media": {
                     "links": [
@@ -232,7 +243,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                 }
             },
             {
-                "group":"grupp8",
+                "group":"grupp1",
                 "tag": "Posthuman",
                 "text": "",
                 "media": {
@@ -240,6 +251,24 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                     ],
                     "imgs": [
                         "https://upload.wikimedia.org/wikipedia/commons/6/60/Equus_quagga.jpg",
+                    ],
+                    "videos": [
+                      
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"grupp7",
+                "tag": "Posthuman",
+                "text": "",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://heavyeditorial.files.wordpress.com/2016/05/harambe-22.jpg?quality=65&strip=all&strip=all",
                     ],
                     "videos": [
                       

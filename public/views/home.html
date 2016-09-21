@@ -5,33 +5,38 @@
    
 
 <div class="brand">
-    <img src="/public/img/logo.svg" alt="">
+    <img src="/public/img/logo.png" alt="">
 </div>
 <div class="col-xs-9 col-md-12" style="margin: 0; padding: 0">
     <div id="c"></div>
 </div>
 
-<div class="col-xs-3 col-md-3 offset-md-3" style="overflow: scroll; height: 100vh; position: absolute; right: 0">
+<div ng-class="mediaBoard ? 'col-md-11' : 'col-md-3'" class="col-xs-3 offset-md-3" id="media_sidebar" style="overflow: scroll; height: 100vh; position: absolute; right: 0; transition: all .3s ease-in-out">
     <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">       
-        
-        <div class="panel panel-default" ng-repeat="t in data">
+
+        <div class="panel panel-default" ng-repeat="t in data | orderBy:'group'">
+           <i ng-click="changeMediaState()" ng-class="mediaBoard ? 'fa-chevron-right' : 'fa-chevron-left'" class="fa" style="color: #000"></i>
             <div class="panel-body">
                 <h2>{{ t.tag }}</h2>
                 <span class="label label-default">{{ t.group }}</span>
-                <p>{{ t.text | limitTo: 300}}</p>
-                
-                <ul>
-                    <li ng-repeat="i in t.media.links"><a ng-href="{{ i.link }}">{{ i.text }}</a></li>
-                </ul>
-                <p>{{}}</p>
-                <div class="panel" ng-if="t.media.imgs.length > 0">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.text.length > 0">
+                    <p>{{ t.text | limitTo: 300}}</p>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.links.length > 0">
+                   <h2>Länkar:</h2>
+                   <ul>
+                       <li ng-repeat="i in t.media.links"><a ng-href="{{ i.link }}">{{ i.text }}</a></li>
+                   </ul>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.imgs.length > 0">
                     <img ng-repeat="i in t.media.imgs" ng-src="{{ i }}" alt="">
                 </div>
-                <div class="panel" ng-if="t.media.videos.length > 0">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.videos.length > 0">
                     <iframe ng-repeat="i in t.media.videos" width="100%" height="auto" ng-src="{{ sce.trustAsResourceUrl(i) }}" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div class="panel" ng-if="t.media.sounds.length > 0">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.sounds.length > 0">
                     <iframe ng-repeat="i in t.media.sounds" width="100%" height="auto" scrolling="no" frameborder="no" ng-src="{{ sce.trustAsResourceUrl(i) }}"></iframe>
+
                 </div>
             </div>
         </div>

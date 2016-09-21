@@ -7,7 +7,7 @@
        var texts = [
            {
                 "group":"grupp8",
-                "tag": "Epistemological",
+                "tag": "Posthuman",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lobortis lectus. Nunc mollis egestas metus sit amet condimentum. Fusce tincidunt, arcu id mattis elementum, elit lectus gravida enim, quis pharetra orci dui nec enim. Aenean at tempor nulla. Cras accumsan consectetur orci at efficitur.",
                 "media": {
                     "links": [
@@ -32,7 +32,7 @@
                 }
             },
             {
-                "group":"grupp8",
+                "group":"grupp1",
                 "tag": "Posthuman",
                 "text": "",
                 "media": {
@@ -40,6 +40,24 @@
                     ],
                     "imgs": [
                         "https://upload.wikimedia.org/wikipedia/commons/6/60/Equus_quagga.jpg",
+                    ],
+                    "videos": [
+                      
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"grupp7",
+                "tag": "Posthuman",
+                "text": "",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://heavyeditorial.files.wordpress.com/2016/05/harambe-22.jpg?quality=65&strip=all&strip=all",
                     ],
                     "videos": [
                       
