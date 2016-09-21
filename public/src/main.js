@@ -56,8 +56,11 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
         }
     });
 
-}]);
+    window.hesNameIs = function(){
+        window.open('https://www.youtube.com/watch?v=XgUB3lF9IQA','_blank');
+    }
 
+}]);
 (function() {
  
    angular.module('app').factory('node', node);
