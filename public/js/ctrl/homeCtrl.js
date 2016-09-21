@@ -30,7 +30,12 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
     $scope.network.on( 'select', function(params) {
         if(params.nodes == ""){
             $scope.scrollTop();
-            console.log("a",params.edges);
+            
+            $scope.$apply(function() {
+                $scope.data = texts.getByTag(params.edges[0]);
+                $scope.title = params.edges[0];
+            });
+
             if(params.edges.length == 0){
               $scope.$apply(function() {
                 $scope.title = null;
@@ -39,7 +44,6 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
         }
         else{
             $scope.scrollTop();
-            console.log("b", params.nodes[0]);
             $scope.$apply(function() {
                 $scope.data = texts.getByTag(params.nodes[0]);
                 $scope.title = params.nodes[0];

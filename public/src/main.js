@@ -38,7 +38,12 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
     $scope.network.on( 'select', function(params) {
         if(params.nodes == ""){
             $scope.scrollTop();
-            console.log("a",params.edges);
+            
+            $scope.$apply(function() {
+                $scope.data = texts.getByTag(params.edges[0]);
+                $scope.title = params.edges[0];
+            });
+
             if(params.edges.length == 0){
               $scope.$apply(function() {
                 $scope.title = null;
@@ -47,7 +52,6 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
         }
         else{
             $scope.scrollTop();
-            console.log("b", params.nodes[0]);
             $scope.$apply(function() {
                 $scope.data = texts.getByTag(params.nodes[0]);
                 $scope.title = params.nodes[0];
@@ -66,7 +70,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
    angular.module('app').factory('node', node);
  
     
-    //Colors not used #547334 #c2ba30 #a82123
+    //Colors not used #a82123
     
    function node() {
 
@@ -167,6 +171,12 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                
                //ontologi
                {id: "Ontologi", label: 'Ontologi', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#13744e', border: '#13744e' }, border: border }},
+               
+               //Rhizomatik
+               {id: "Rhizomatik", label: 'Rhizomatik', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#547334', border: '#547334' }, border: border }},
+               
+               //Rhizomatik
+               {id: "Onto-Epistemologi", label: 'Onto-Epistemologi', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#c2ba30', border: '#c2ba30' }, border: border }},
            ],
            edges: [
                //epistemological Gr8
@@ -174,7 +184,8 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                {from: "Epistemological", to: "Ontologi"},
                {from: "Epistemological", to: "Accountable"},
                {from: "Epistemological", to: "Digital divides"},
-               {from: "Epistemological", to: "Diffraction"},
+               {from: "Epistemological", to: "Diffraction", id: "Epistemological-Diffraction"},
+               {from: "Epistemological", to: "Rhizomatik", id: "Epistemological-Rhizomatik"},
                
                //embeddedness Gr10
                {from: "Embeddedness", to: "Discursive"},
@@ -220,25 +231,16 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
 
        var texts = [
            {
-                "group":"grupp8",
-                "tag": "Posthuman",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lobortis lectus. Nunc mollis egestas metus sit amet condimentum. Fusce tincidunt, arcu id mattis elementum, elit lectus gravida enim, quis pharetra orci dui nec enim. Aenean at tempor nulla. Cras accumsan consectetur orci at efficitur.",
+                "group":"GR8",
+                "tag": "Epistemological-Diffraction",
+                "text": "Bilderna till vänster har diffrakterats genom ett program som vi har använt som prisma och de mindre bilderna till höger är diffraktionsgittret.",
                 "media": {
                     "links": [
-                        {
-                            "text": "google",
-                            "link": "https://www.google.com"
-                        },
-                        {
-                            "text": "google",
-                            "link": "https://www.google.com"
-                        },
                     ],
                     "imgs": [
-                        "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg",
+                        "https://me1582ht16.files.wordpress.com/2016/09/14360425_10210715975077425_1906342575_o.jpg?w=660",
                     ],
                     "videos": [
-                        "https://www.youtube.com/embed/tntOCGkgt98",
                     ],
                     "sounds": [
                         
@@ -246,32 +248,14 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                 }
             },
             {
-                "group":"grupp1",
-                "tag": "Posthuman",
+                "group":"GR8",
+                "tag": "Rhizomatik",
                 "text": "",
                 "media": {
                     "links": [
                     ],
                     "imgs": [
-                        "https://upload.wikimedia.org/wikipedia/commons/6/60/Equus_quagga.jpg",
-                    ],
-                    "videos": [
-                      
-                    ],
-                    "sounds": [
-                        
-                    ]
-                }
-            },
-            {
-                "group":"grupp7",
-                "tag": "Posthuman",
-                "text": "",
-                "media": {
-                    "links": [
-                    ],
-                    "imgs": [
-                        "https://heavyeditorial.files.wordpress.com/2016/05/harambe-22.jpg?quality=65&strip=all&strip=all",
+                        "public/img/rhizom.png",
                     ],
                     "videos": [
                       

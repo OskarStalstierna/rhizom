@@ -3,7 +3,7 @@
    angular.module('app').factory('node', node);
  
     
-    //Colors not used #547334 #c2ba30 #a82123
+    //Colors not used #a82123
     
    function node() {
 
@@ -104,6 +104,12 @@
                
                //ontologi
                {id: "Ontologi", label: 'Ontologi', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#13744e', border: '#13744e' }, border: border }},
+               
+               //Rhizomatik
+               {id: "Rhizomatik", label: 'Rhizomatik', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#547334', border: '#547334' }, border: border }},
+               
+               //Rhizomatik
+               {id: "Onto-Epistemologi", label: 'Onto-Epistemologi', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#c2ba30', border: '#c2ba30' }, border: border }},
            ],
            edges: [
                //epistemological Gr8
@@ -111,7 +117,8 @@
                {from: "Epistemological", to: "Ontologi"},
                {from: "Epistemological", to: "Accountable"},
                {from: "Epistemological", to: "Digital divides"},
-               {from: "Epistemological", to: "Diffraction"},
+               {from: "Epistemological", to: "Diffraction", id: "Epistemological-Diffraction"},
+               {from: "Epistemological", to: "Rhizomatik", id: "Epistemological-Rhizomatik"},
                
                //embeddedness Gr10
                {from: "Embeddedness", to: "Discursive"},
