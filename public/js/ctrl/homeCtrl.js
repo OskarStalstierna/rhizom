@@ -1,8 +1,8 @@
-app.controller('homeCtrl', ["$scope", "node", function($scope, node){
-    //$scope.title = "AIDS OSKAR!!!!"
-
+app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, $sce, node, texts){
+    $scope.title = null;
+    $scope.sce = $sce;
     $scope.splash = true;
-    
+    $scope.data = [];
     $scope.mediaBoard = false;
     
     $scope.desc = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, magni. Nobis ullam adipisci voluptates consequatur eveniet deleniti expedita optio, vero quam culpa molestias facere laudantium enim vitae accusamus atque possimus odit voluptatem distinctio repellat eaque, error commodi et nulla.";
@@ -12,7 +12,7 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
         $scope.$apply(function() {
             $scope.splash = false;
         });
-    },2000);
+    }, 1000);
     
     $scope.title = null;
     $scope.groups = "grp1";
@@ -42,10 +42,15 @@ app.controller('homeCtrl', ["$scope", "node", function($scope, node){
             $scope.scrollTop();
             console.log("b", params.nodes[0]);
             $scope.$apply(function() {
+                $scope.data = texts.getByTag(params.nodes[0]);
                 $scope.title = params.nodes[0];
             });
             
         }
     });
+
+    window.hesNameIs = function(){
+        window.open('https://www.youtube.com/watch?v=XgUB3lF9IQA','_blank');
+    }
 
 }]);

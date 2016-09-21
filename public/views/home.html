@@ -13,57 +13,29 @@
 
 <div ng-class="mediaBoard ? 'col-md-11' : 'col-md-3'" class="col-xs-3 offset-md-3" id="media_sidebar" style="overflow: scroll; height: 100vh; position: absolute; right: 0; transition: all .3s ease-in-out">
     <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">       
-        <div class="panel panel-default">
-           <i ng-click="changeMediaState()" ng-class="mediaBoard ? 'fa-chevron-right' : 'fa-chevron-left'" class="fa" style="color: #000"></i>
-            <div class="panel-body">
-                <h2>{{ title }}</h2>
-                <span class="label label-default">{{ groups }}</span>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    
-                    <p>{{ desc | limitTo: 300}}</p>
-                </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                   <h2>Länkar:</h2>
-                   <ul>
-                       <li><a href="https://www.google.se">https://www.google.se</a></li>
-                   </ul>
-                </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg" alt="">
-                </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/273828810&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
+        <div class="panel panel-default" ng-repeat="t in data | orderBy:'group'">
            <i ng-click="changeMediaState()" ng-class="mediaBoard ? 'fa-chevron-right' : 'fa-chevron-left'" class="fa" style="color: #000"></i>
             <div class="panel-body">
-                <h2>{{ title }}</h2>
-                <span class="label label-default">{{ groups }}</span>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    
-                    <p>{{ desc | limitTo: 300}}</p>
+                <h2>{{ t.tag }}</h2>
+                <span class="label label-default">{{ t.group }}</span>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.text.length > 0">
+                    <p>{{ t.text | limitTo: 300}}</p>
                 </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.links.length > 0">
                    <h2>Länkar:</h2>
                    <ul>
-                       <li><a href="https://www.google.se">https://www.google.se</a></li>
+                       <li ng-repeat="i in t.media.links"><a ng-href="{{ i.link }}">{{ i.text }}</a></li>
                    </ul>
                 </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg" alt="">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.imgs.length > 0">
+                    <img ng-repeat="i in t.media.imgs" ng-src="{{ i }}" alt="">
                 </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.videos.length > 0">
+                    <iframe ng-repeat="i in t.media.videos" width="100%" height="auto" ng-src="{{ sce.trustAsResourceUrl(i) }}" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
-                    <iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/273828810&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel" ng-if="t.media.sounds.length > 0">
+                    <iframe ng-repeat="i in t.media.sounds" width="100%" height="auto" scrolling="no" frameborder="no" ng-src="{{ sce.trustAsResourceUrl(i) }}"></iframe>
 
                 </div>
             </div>
