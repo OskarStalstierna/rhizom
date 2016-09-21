@@ -5,36 +5,67 @@
    
 
 <div class="brand">
-    <img src="/public/img/logo.svg" alt="">
+    <img src="/public/img/logo.png" alt="">
 </div>
 <div class="col-xs-9 col-md-12" style="margin: 0; padding: 0">
     <div id="c"></div>
 </div>
 
-<div class="col-xs-3 col-md-3 offset-md-3" style="overflow: scroll; height: 100vh; position: absolute; right: 0">
+<div ng-class="mediaBoard ? 'col-md-11' : 'col-md-3'" class="col-xs-3 offset-md-3" id="media_sidebar" style="overflow: scroll; height: 100vh; position: absolute; right: 0; transition: all .3s ease-in-out">
     <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">       
         <div class="panel panel-default">
+           <i ng-click="changeMediaState()" ng-class="mediaBoard ? 'fa-chevron-right' : 'fa-chevron-left'" class="fa" style="color: #000"></i>
             <div class="panel-body">
                 <h2>{{ title }}</h2>
                 <span class="label label-default">{{ groups }}</span>
-                <p>{{ desc | limitTo: 300}}</p>
-                <div class="panel">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                    
+                    <p>{{ desc | limitTo: 300}}</p>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                   <h2>Länkar:</h2>
+                   <ul>
+                       <li><a href="https://www.google.se">https://www.google.se</a></li>
+                   </ul>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
                     <img src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg" alt="">
                 </div>
-                <div class="panel">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
                     <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <div class="panel">
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
                     <iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/273828810&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
                 </div>
             </div>
         </div>
+        
         <div class="panel panel-default">
+           <i ng-click="changeMediaState()" ng-class="mediaBoard ? 'fa-chevron-right' : 'fa-chevron-left'" class="fa" style="color: #000"></i>
             <div class="panel-body">
                 <h2>{{ title }}</h2>
-                <span>{{ groups }}</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iusto, voluptatum totam quam labore aliquam veniam eum odit, nulla consequuntur ea eligendi assumenda nisi ipsam necessitatibus similique illo. Ipsam perferendis sequi, ipsum voluptates deserunt architecto ducimus, corporis eveniet porro ex, assumenda. Atque rerum accusamus libero, optio tenetur iste ipsum? Blanditiis.</p>
+                <span class="label label-default">{{ groups }}</span>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                    
+                    <p>{{ desc | limitTo: 300}}</p>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                   <h2>Länkar:</h2>
+                   <ul>
+                       <li><a href="https://www.google.se">https://www.google.se</a></li>
+                   </ul>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg" alt="">
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div ng-class="mediaBoard ? 'col-md-10 centered' : ''" class="panel">
+                    <iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/273828810&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+                </div>
             </div>
         </div>
     </div>
