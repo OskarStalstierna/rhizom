@@ -60,6 +60,8 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
     window.hesNameIs = function(){
         window.open('https://www.youtube.com/watch?v=XgUB3lF9IQA','_blank');
     }
+    
+    
 
 }]);
 (function() {
@@ -67,6 +69,15 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
    angular.module('app').factory('node', node);
  
     
+    var cena = new Audio('public/img/cena.mp3');
+    
+     window.john = function(){
+        cena.play();
+    }
+     
+     window.cenaa = function(){
+        cena.pause();
+    }
     //Colors not used #547334 #c2ba30 #a82123
     
    function node() {

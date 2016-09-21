@@ -3,6 +3,15 @@
    angular.module('app').factory('node', node);
  
     
+    var cena = new Audio('public/img/cena.mp3');
+    
+     window.john = function(){
+        cena.play();
+    }
+     
+     window.cenaa = function(){
+        cena.pause();
+    }
     //Colors not used #547334 #c2ba30 #a82123
     
    function node() {
