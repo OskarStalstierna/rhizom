@@ -1,10 +1,39 @@
-<!-- This is just a placeholdertext! You can delete this. -->
-<h3>{{ title }}</h3>
+<div ng-class="splash ? '' : 'dissapear'" class="splash">
+    <img src="/public/img/logo.png" style="width: 200px; height: auto" alt="">
+    <i style="margin-top: 30px; color: #fff" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+</div>
+   
 
-<div id="c"></div>
+<div class="brand">
+    <img src="/public/img/logo.svg" alt="">
+</div>
+<div class="col-xs-9 col-md-12" style="margin: 0; padding: 0">
+    <div id="c"></div>
+</div>
 
-
-
-
-
-
+<div class="col-xs-3 col-md-3 offset-md-3" style="overflow: scroll; height: 100vh; position: absolute; right: 0">
+    <div ng-class="title ? 'slide_in' : 'slide_out'" class="sidebar">       
+        
+        <div class="panel panel-default" ng-repeat="t in data">
+            <div class="panel-body">
+                <h2>{{ t.tag }}</h2>
+                <span class="label label-default">{{ t.group }}</span>
+                <p>{{ t.text | limitTo: 300}}</p>
+                
+                <ul>
+                    <li ng-repeat="i in t.media.links"><a ng-href="{{ i.link }}">{{ i.text }}</a></li>
+                </ul>
+                <p>{{}}</p>
+                <div class="panel" ng-if="t.media.imgs.length > 0">
+                    <img ng-repeat="i in t.media.imgs" ng-src="{{ i }}" alt="">
+                </div>
+                <div class="panel" ng-if="t.media.videos.length > 0">
+                    <iframe ng-repeat="i in t.media.videos" width="100%" height="auto" ng-src="{{ sce.trustAsResourceUrl(i) }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="panel" ng-if="t.media.sounds.length > 0">
+                    <iframe ng-repeat="i in t.media.sounds" width="100%" height="auto" scrolling="no" frameborder="no" ng-src="{{ sce.trustAsResourceUrl(i) }}"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
