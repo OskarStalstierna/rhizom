@@ -144,6 +144,7 @@
                {from: "Transdisciplinary science", to: "Embeddedness"},
                {from: "Transdisciplinary science", to: "Diffraction"},
                {from: "Transdisciplinary science", to: "Intra-action"},*/
+               {from: "Transdisciplinary science", to: "Embeddedness", id: "Transdisciplinary science-Embeddedness"},
                
                //intraaction Gr5
                /*{from: "Intra-action", to: "Situated knowledges"},
@@ -162,7 +163,17 @@
                {from: "Deconstruction", to: "Diffraction"}*/
 
                //gr3
+               
                {from: "Entangled", to: "Diffraction", id: "Entangled-Diffraction"},
+               
+               //gr18
+               {from: "Posthuman", to: "Intra­-action", id: "Posthuman-Intra­-action"},
+               
+               //gr12
+               {from: "Discursive", to: "Materiality / Materialization", id: "Discursive-Materiality / Materialization"},
+               
+               //gr7 + gr18
+               {from: "Posthuman", to: "Digital divides", id: "Posthuman-Digital divides"},
                
                //gr3
                {from: "Materiality / Materialization", to: "Situated knowledges", id: "Materiality / Materialization-Situated knowledges"},

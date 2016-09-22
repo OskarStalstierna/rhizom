@@ -205,6 +205,7 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                {from: "Transdisciplinary science", to: "Embeddedness"},
                {from: "Transdisciplinary science", to: "Diffraction"},
                {from: "Transdisciplinary science", to: "Intra-action"},*/
+               {from: "Transdisciplinary science", to: "Embeddedness", id: "Transdisciplinary science-Embeddedness"},
                
                //intraaction Gr5
                /*{from: "Intra-action", to: "Situated knowledges"},
@@ -223,7 +224,17 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                {from: "Deconstruction", to: "Diffraction"}*/
 
                //gr3
+               
                {from: "Entangled", to: "Diffraction", id: "Entangled-Diffraction"},
+               
+               //gr18
+               {from: "Posthuman", to: "Intra­-action", id: "Posthuman-Intra­-action"},
+               
+               //gr12
+               {from: "Discursive", to: "Materiality / Materialization", id: "Discursive-Materiality / Materialization"},
+               
+               //gr7 + gr18
+               {from: "Posthuman", to: "Digital divides", id: "Posthuman-Digital divides"},
                
                //gr3
                {from: "Materiality / Materialization", to: "Situated knowledges", id: "Materiality / Materialization-Situated knowledges"},
@@ -266,6 +277,42 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                     ],
                     "imgs": [
                         "public/img/rhizom.png",
+                    ],
+                    "videos": [
+                      
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"gr8",
+                "tag": "Epistemological",
+                "text": "Ens konstant skiftande synsätt och förståelse gör att ens tolkningar alltid är i rörelse och aldrig är den samma.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+
+                    ],
+                    "videos": [
+                      
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"gr8",
+                "tag": "Onto-Epistemologi",
+                "text": "Artefakten utvecklar kunskapen och kunskapen utvecklar artefakten.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+
                     ],
                     "videos": [
                       
@@ -447,6 +494,108 @@ app.controller('homeCtrl', ["$scope", "$sce", "node", "texts", function($scope, 
                     ],
                     "videos": [
                       
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"GR4",
+                "tag": "Transdisciplinary science-Embeddedness",
+                "text": "Istället för att ta sig an hela förståelsen av ett begrepp kan vi diffraktera denna och skapa små berättelser, perspektiv kopplat till begreppet. Embedded_Trans lyfter fram leken som metod där vi utgått från transdisciplinär vetenskap och prövat begreppet mot embeddedness. Gestaltningen utforskar vad som händer i mötet mellan två fragment genom lekens möjligheter.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/embedded-poster-3.pdf",
+                    ],
+                    "videos": [
+                       "https://www.youtube.com/embed/Wji0SmYO9tg",
+                    ],
+                    "sounds": [
+                        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/284083691&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"
+                    ]
+                }
+            },
+            {
+                "group":"GR18",
+                "tag": "Posthuman-Intra­-action",
+                "text": "Koppling mellan posthumanism och intra­aktion i form av en auditiv representation.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"GR7 + GR18",
+                "tag": "Posthuman-Digital divides",
+                "text": "Prövningen utforskar hur teknologi som internet, smartphones och tablets tar allt mer plats i människans liv. Tanken är att vi långsamt lever mer och mer inom det posthumanistiska riket. Det virtuella riket. Internet är en enda stor verklighet som vi fördjupar oss i.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                    ],
+                    "videos": [
+                        "https://www.youtube.com/embed/2pe_FIuaz1g",
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"GR12",
+                "tag": "Deconstruction",
+                "text": "Deconstruction var första steget i animationen, vi ville bryta ner bilden och sen bygga upp den igen. Genom nedbrytningen fick vi större förståelse för bilden och den fick mer mening genom animationen.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/deconstruction_klar_resized.gif",
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"GR12",
+                "tag": "Diffraction",
+                "text": "Flickan rör sig framåt på molnet. Vart är hon på väg? Spelar det någon roll vart hon är på väg?",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/deconstruction1_diffraktion_resized.gif?w=660",
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+            {
+                "group":"GR12",
+                "tag": "Discursive-Materiality / Materialization",
+                "text": "Ett ting påverkar ett annat ting, i detta fall påverkar vinden hur kläderna rör sig. Som animerare bestämmer man hur animationen ska påverka berättandet.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/deconstruction_disscursive.gif?w=660",
+                    ],
+                    "videos": [
                     ],
                     "sounds": [
                         
