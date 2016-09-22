@@ -262,7 +262,11 @@
                     "links": [
                     ],
                     "imgs": [
-                        "https://me1582ht16.files.wordpress.com/2016/09/embedded-poster-3.pdf",
+                        "https://c4.staticflickr.com/6/5660/29228760843_c8a3553553_z.jpg",
+                        "https://c3.staticflickr.com/9/8117/29819867506_0d56537f3c_z.jpg",
+                        "https://c7.staticflickr.com/9/8099/29562075950_8a408862ed_z.jpg",
+                        
+
                     ],
                     "videos": [
                        "https://www.youtube.com/embed/Wji0SmYO9tg",
