@@ -110,47 +110,63 @@
                
                //Rhizomatik
                {id: "Onto-Epistemologi", label: 'Onto-Epistemologi', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#c2ba30', border: '#c2ba30' }, border: border }},
+               
+               //Rhizomatik
+               {id: "Interaktion", label: 'Interaktion', shape: shape, font: {color: font}, color: {background: bg, highlight: { background: '#a82123', border: '#a82123' }, border: border }},
            ],
            edges: [
                //epistemological Gr8
-               {from: "Epistemological", to: "Situated knowledges"},
+               /*{from: "Epistemological", to: "Situated knowledges"},
                {from: "Epistemological", to: "Ontologi"},
                {from: "Epistemological", to: "Accountable"},
-               {from: "Epistemological", to: "Digital divides"},
+               {from: "Epistemological", to: "Digital divides"},*/
                {from: "Epistemological", to: "Diffraction", id: "Epistemological-Diffraction"},
-               {from: "Epistemological", to: "Rhizomatik", id: "Epistemological-Rhizomatik"},
+               //{from: "Epistemological", to: "Rhizomatik", id: "Epistemological-Rhizomatik"},
                
                //embeddedness Gr10
-               {from: "Embeddedness", to: "Discursive"},
+               /*{from: "Embeddedness", to: "Discursive"},
                {from: "Embeddedness", to: "Digital divides"},
                {from: "Embeddedness", to: "Entangled"},
                {from: "Embeddedness", to: "Posthuman"},
-               {from: "Embeddedness", to: "Deconstruction"},
+               {from: "Embeddedness", to: "Deconstruction"},*/
                
                //diffraction Gr9
-               {from: "Diffraction", to: "Situated knowledges"},
+               /*{from: "Diffraction", to: "Situated knowledges"},
                {from: "Diffraction", to: "Accountable"},
                {from: "Diffraction", to: "Posthuman"},
                {from: "Diffraction", to: "Embeddedness"},
                {from: "Diffraction", to: "Deconstruction"},
-               {from: "Diffraction", to: "Becoming with"},
+               {from: "Diffraction", to: "Becoming with"},*/
+               {from: "Diffraction", to: "Posthuman", id: "Diffraction-Posthuman"},
                
                //transdisciplinary Gr4
-               {from: "Transdisciplinary science", to: "Situated knowledges"},
+               /*{from: "Transdisciplinary science", to: "Situated knowledges"},
                {from: "Transdisciplinary science", to: "Embeddedness"},
                {from: "Transdisciplinary science", to: "Diffraction"},
-               {from: "Transdisciplinary science", to: "Intra-action"},
+               {from: "Transdisciplinary science", to: "Intra-action"},*/
                
                //intraaction Gr5
-               {from: "Intra-action", to: "Situated knowledges"},
-               {from: "Intra-action", to: "Embeddedness"},
+               /*{from: "Intra-action", to: "Situated knowledges"},
+               {from: "Intra-action", to: "Embeddedness"},*/
+               {from: "Intra-action", to: "Accountable", id: "Intra­-action-Accoutability"},
+               {from: "Intra-action", to: "Diffraction", id: "Intra­-action-Diffraction"},
+               {from: "Intra-action", to: "Interaktion", id: "Intra­-action-Interaktion"},
+               {from: "Intra-action", to: "Ontologi", id: "Intra­-action-Ontologi"},
+               
                
                 //becomingwith Gr14
-               {from: "Becoming with", to: "Situated knowledges"},
+               /*{from: "Becoming with", to: "Situated knowledges"},
                {from: "Becoming with", to: "Intra-action"},
                {from: "Becoming with", to: "Diffraction"},
                {from: "Situated knowledges", to: "Accountable"},
-               {from: "Deconstruction", to: "Diffraction"}
+               {from: "Deconstruction", to: "Diffraction"}*/
+
+               //gr3
+               {from: "Entangled", to: "Diffraction", id: "Entangled-Diffraction"},
+               
+               //gr3
+               {from: "Materiality / Materialization", to: "Situated knowledges", id: "Materiality / Materialization-Situated knowledges"},
+               {from: "Materiality / Materialization", to: "Intra-action", id: "Materiality / Materialization-Intra-action"},
            ]
        }
    }
