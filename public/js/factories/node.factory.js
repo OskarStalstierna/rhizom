@@ -175,6 +175,16 @@
                //gr7 + gr18
                {from: "Posthuman", to: "Digital divides", id: "Posthuman-Digital divides"},
                
+               //gr7
+               {from: "Diffraction", to: "Deconstruction", id: "Diffraction-Deconstruction"},
+               
+               //gr13
+               {from: "Accountable", to: "Epistemological", id: "Accountable-Epistemological"},
+               
+               //gr14
+               {from: "Becoming with", to: "Diffraction", id: "Becoming with-Diffraction"},
+               {from: "Situated knowledges", to: "Becoming with", id: "Situated knowledges-Becoming with"},
+               
                //gr3
                {from: "Materiality / Materialization", to: "Situated knowledges", id: "Materiality / Materialization-Situated knowledges"},
                {from: "Materiality / Materialization", to: "Intra-action", id: "Materiality / Materialization-Intra-action"},

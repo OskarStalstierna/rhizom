@@ -309,6 +309,23 @@
                     ]
                 }
             },
+           {
+                "group":"GR7",
+                "tag": "Diffraction-Deconstruction",
+                "text": "Gestaltningen är diffrakterade klockor och tid.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                    ],
+                    "videos": [
+                        "https://www.youtube.com/embed/RSqFwq_GihI",
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
             {
                 "group":"GR12",
                 "tag": "Deconstruction",
@@ -360,6 +377,95 @@
                     ]
                 }
             },
+           {
+                "group":"GR13",
+                "tag": "Accountable-Epistemological",
+                "text": "",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                    ],
+                    "videos": [
+                        "https://www.youtube.com/embed/5Ean04ynuJ4"
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+           {
+                "group":"GR14",
+                "tag": "Becoming with-Diffraction",
+                "text": "Diffraktion: Genom dem olika färgerna så tillkommer det en historia om denna dörr. Vad är det för material, hur länge har dörren stått där, vad har hänt med dörren, varför den typen av form ,osv Genom detta kan man förstå mer om den och hur den påverkat vår omgivning. Becoming with",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/received_10207132097801948.jpeg?w=660"
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+           {
+                "group":"GR14 - Felicia",
+                "tag": "Situated knowledges-Becoming with",
+                "text": "För att han i filmen ska kunna använda kameran på mobilen så behöver han situera sig, alltså att han behöver få kunskaper om mobilkameran. Det gör han genom att läsa om mobilkameran och sen testa sig fram. Sen använder han mobilen som en kamera.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                    ],
+                    "videos": [
+                        "https://www.youtube.com/embed/wWFQXPOKjgI"
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+           {
+                "group":"GR14",
+                "tag": "Becoming with",
+                "text": "Becoming with “To be one is always to become with many” ­ Haraway,J,D. Genom mötet med flera relationer eller mötet av olika situationer blir vi anpassade till dem flesta världar. Att “bli med” handlar inte om att imitera någon utan mer om förståelse.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://me1582ht16.files.wordpress.com/2016/09/img_9459.jpg?w=176&h=117&crop=1",
+                        "https://me1582ht16.files.wordpress.com/2016/09/becomewithlule.png?w=660",
+                        "https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/14358758_949679898511506_2925010012088768099_n.jpg?oh=d7678743cf5c718ab25423a037d32094&oe=5869F4F6"
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            },
+           {
+                "group":"GR14",
+                "tag": "Becoming with",
+                "text": "Naturen och människan.",
+                "media": {
+                    "links": [
+                    ],
+                    "imgs": [
+                        "https://i2.wp.com/me1582ht16.files.wordpress.com/2016/09/img_1534.jpg?ssl=1&w=450",
+                        "https://i1.wp.com/me1582ht16.files.wordpress.com/2016/09/img_1584.jpg?ssl=1&w=450",
+                        "https://i0.wp.com/me1582ht16.files.wordpress.com/2016/09/img_1536.jpg?ssl=1&w=450"
+                    ],
+                    "videos": [
+                    ],
+                    "sounds": [
+                        
+                    ]
+                }
+            }
        ];
 
        return {
